@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 from .models import (
-    Profile
+    UserDetail
 )
 
 
-class ProfileAdmin(admin.ModelAdmin):
+class UserDetailAdmin(admin.ModelAdmin):
     list_display = (
-        'user', 'profile_picture', 'screen_name')
+        'user', 'profile_picture')
 
 
-admin.site.register(Profile, ProfileAdmin)
+admin.site.register(UserDetail, UserDetailAdmin)

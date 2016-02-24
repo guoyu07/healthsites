@@ -141,15 +141,11 @@
                     <div class="person col-xs-8 pad0x">
                         <div class="avatar-holder">
                             <img src="{% static "img/av-holder.svg" %}" class="frame" width="48" height="48"/>
-                            {% if user.profile_picture == "" %}
-                                <img src="https://pbs.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png" width="48" height="48"/>
-                            {% else %}
-                                <img src="{{ user.profile_picture }}" width="48" height="48"/>
-                            {% endif %}
+                            <img src="https://pbs.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png"/>
                         </div>
 
                     <span class="name">
-                        <a href="{% url 'userprofilepage' %}{{ user.username }}">{{ user.username }}</a>
+                        <a href="{% url 'userprofilepage' %}">{{ user }}</a>
                     </span>
                     </div>
                     <a href="{% url 'logout_user' %}" class="button col-xs-4 pad0x blue stroke"><i
